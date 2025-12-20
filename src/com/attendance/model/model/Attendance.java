@@ -1,8 +1,8 @@
-package com.attendance.model;
+package com.attendance.model.model;
 
 import jakarta.persistence.*;
-        import lombok.*;
-        import java.time.LocalDateTime;
+import lombok.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "attendance")

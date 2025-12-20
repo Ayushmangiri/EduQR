@@ -1,7 +1,7 @@
-package com.attendance.repository;
+package com.attendance.model.repository;
 
-import com.attendance.model.User;
-import com.attendance.model.Role;
+import com.attendance.model.model.User;
+import com.attendance.model.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;

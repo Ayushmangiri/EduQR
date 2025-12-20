@@ -1,16 +1,16 @@
-package com.attendance.model;
+package com.attendance.model.model;
 
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "sessions")
+@Table(name = "materials")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Session {
+public class Material {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,21 +19,22 @@ public class Session {
     @JoinColumn(name = "subject_id", nullable = false)
     private Subject subject;
 
-    @Column(nullable = false, unique = true)
-    private String token;
+    @Column(nullable = false)
+    private String fileUrl;
 
     @Column(nullable = false)
-    private LocalDateTime startTime;
-
-    @Column(nullable = false)
-    private LocalDateTime expiryTime;
+    private String fileName;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private SessionStatus status;
+    private MaterialType type;
 
-    public boolean isActive() {
-        return status == SessionStatus.ACTIVE &&
-                LocalDateTime.now().isBefore(expiryTime);
+    @Column(nullable = false)
+    private Long uploadedBy;
+
+    private LocalDateTime uploadedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        uploadedAt = LocalDateTime.now();
     }
 }

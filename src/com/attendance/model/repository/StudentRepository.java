@@ -1,6 +1,6 @@
-package com.attendance.repository;
+package com.attendance.model.repository;
 
-import com.attendance.model.Student;
+import com.attendance.model.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

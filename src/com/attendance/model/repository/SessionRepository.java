@@ -1,6 +1,6 @@
-package com.attendance.repository;
+package com.attendance.model.repository;
 
-import com.attendance.model.Session;
+import com.attendance.model.model.Session;
 import com.attendance.model.SessionStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

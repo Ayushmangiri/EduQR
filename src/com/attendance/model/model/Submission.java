@@ -1,4 +1,4 @@
-package com.attendance.model;
+package com.attendance.model.model;
 
 import jakarta.persistence.*;
 import lombok.*;

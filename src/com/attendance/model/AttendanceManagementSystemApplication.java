@@ -1,4 +1,4 @@
-package com.attendance;
+package com.attendance.model;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
