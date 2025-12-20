@@ -1,4 +1,5 @@
 package com.attendance.model;
 
-public class AttendanceMethod {
+public enum AttendanceMethod {
+    QR_SCAN, ID_PIN
 }
