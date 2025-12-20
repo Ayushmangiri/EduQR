@@ -1,4 +1,5 @@
 package com.attendance.model;
 
-public class RequestStatus {
+public enum RequestStatus {
+    PENDING, APPROVED, REJECTED
 }
